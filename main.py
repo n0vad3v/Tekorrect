@@ -11,7 +11,7 @@ def process(opt):
     path, file = opt.path, opt.file
 
     if path:
-        file_with_paths = [os.path.join(path, f) for f in os.listdir(path)]
+        file_with_paths = [os.path.join(path, f) for f in os.listdir(path) if os.path.isfile(f)]
         for old_file_path in file_with_paths:
             call_pangu(old_file_path)
     elif file:

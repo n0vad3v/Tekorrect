@@ -4,15 +4,11 @@
 
 此 Python 腳本用於給已經完成的 Markdown 遍寫的文檔進行優化，它會將壹些非標準，或不推薦的排版方式，進行自動格式化、標準化。
 
-使用 [vinta/pangu.py](https://github.com/vinta/pangu.py) 爲基礎製作，使用前需保證您已安裝 Python3 並且安裝了 [pangu.py](https://github.com/vinta/pangu.py)
+使用 [vinta/pangu.py](https://github.com/vinta/pangu.py) 爲基礎製作，對 pangu.py 有所修改，並已經包含在本倉庫中（不再需要單獨安裝 pangu.py）。
 
 # 用法
 
-若未安裝 pangu.py 需先：
-```bash
-$ pip3 install pangu
-```
-clone 或下載本倉庫的 main.py 後對包含 Markdown 文件的文件夾使用以下指令：
+clone 本倉庫，使用倉庫中的 main.py 後對包含 Markdown 文件的文件夾使用以下指令：
 ```bash
 python3 main.py -p /path/to/hexo/source/_posts
 ```
@@ -28,3 +24,9 @@ python3 main.py -f /path/to/hexo/source/_posts/1.md
 - [ ] 跳過文章 title 優化
 - [x] 修复 Markdown 格式标记不当优化问题（例如：加粗的`**`和删除符号`~~`）
 - [ ] 自动处理 gitHUB, Http 之类的拼写问题
+
+# Authors
+
+[Nova Kwok](https://github.com/n0vad3v)
+
+[BennyThink](https://github.com/bennythink)

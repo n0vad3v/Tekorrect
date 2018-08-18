@@ -26,5 +26,5 @@ python3 main.py -f /path/to/hexo/source/_posts/1.md
 # TO-DO
 
 - [ ] 跳過文章 title 優化
-- [ ] 修复 Markdown 格式标记不当优化问题（例如：加粗的`**`和删除符号`~~`）
+- [x] 修复 Markdown 格式标记不当优化问题（例如：加粗的`**`和删除符号`~~`）
 - [ ] 自动处理 gitHUB, Http 之类的拼写问题

@@ -1,6 +1,7 @@
 # coding: utf-8
 
 import os
+import re
 
 from optparse import OptionParser
 
@@ -23,6 +24,10 @@ def process(opt):
 
 def call_pangu(name):
     new_file_content = pangu.spacing_file(name)
+    # Fix Markdown delete symbol
+    new_file_content = re.sub(r'\~\~(\s)?(.*?)(\s)?\~\~',r'~~\2~~',new_file_content)
+    # Fix Markdown bold(em) symbol
+    new_file_content = re.sub(r'\*\*(\s)?(.*?)(\s)?\*\*',r'**\2**',new_file_content)
     # OverWrite the original files
     with open(name, 'w', encoding='utf-8') as f:
         f.write(new_file_content)

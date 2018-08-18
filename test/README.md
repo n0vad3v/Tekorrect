@@ -1,3 +1,0 @@
-# hexo-pangu
-
-> da

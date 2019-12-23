@@ -15,13 +15,15 @@
 
 # 用法
 
-clone 本倉庫，使用倉庫中的 main.py 後對包含 Markdown 文件的文件夾使用以下指令：
+使用 pip 安裝，例如： `pip3 install tekorrect`。
+
+後對包含 Markdown 文件的文件夾使用以下指令：
 ```bash
-python3 main.py -p /path/to/hexo/source/_posts
+tekorrect -p /path/to/hexo/source/_posts
 ```
 若是針對單獨的文件，可使用以下指令
 ```bash
-python3 main.py -f /path/to/hexo/source/_posts/1.md
+tekorrect -f /path/to/hexo/source/_posts/1.md
 ```
 
 目前版本功能尚未完善，文章標題部分也會被自動添加空格（如不希望使用此功能請對本倉庫進行 Star 並等待後續更新）。

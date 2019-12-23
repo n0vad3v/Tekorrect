@@ -5,8 +5,7 @@ import re
 
 from optparse import OptionParser
 
-import pangu
-
+from pangu import spacing_file
 
 def process(opt):
     path, file = opt.path, opt.file
@@ -23,7 +22,7 @@ def process(opt):
 
 
 def call_pangu(name):
-    new_file_content = pangu.spacing_file(name)
+    new_file_content = spacing_file(name)
     # Fix Markdown delete symbol
     new_file_content = re.sub(r'\~\~(\s)?(.*?)(\s)?\~\~',r'~~\2~~',new_file_content)
     # Fix Markdown bold(em) symbol
@@ -33,7 +32,7 @@ def call_pangu(name):
         f.write(new_file_content)
 
 
-if __name__ == '__main__':
+def exe_main():
     parser = OptionParser()
     parser.add_option("-p", "--path", dest="path",
                       help="parse a directory", metavar="DIR")

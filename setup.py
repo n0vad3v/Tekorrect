@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="tekorrect",
-    version="0.0.2",
+    version="0.0.3",
     author="Nova Kwok",
     author_email="noc@nova.moe",
     description="用於給已經完成的 Markdown 遍寫的文檔進行優化，它會將壹些非標準，或不推薦的排版方式，進行自動格式化、標準化。",

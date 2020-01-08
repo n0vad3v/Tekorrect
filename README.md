@@ -11,7 +11,7 @@
 
 此 Python 腳本用於給已經完成的 Markdown 遍寫的文檔進行優化，它會將壹些非標準，或不推薦的排版方式，進行自動格式化、標準化。
 
-使用 [vinta/pangu.py](https://github.com/vinta/pangu.py) 爲基礎製作，對 pangu.py 有所修改，並已經包含在本倉庫中（不再需要單獨安裝 pangu.py）。
+使用 [vinta/pangu.py](https://github.com/vinta/pangu.py) 爲基礎製作。
 
 # 用法
 

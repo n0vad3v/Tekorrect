@@ -23,12 +23,19 @@ def process(opt):
 
 def call_pangu(name):
     new_file_content = spacing_file(name)
+
+    ## There are some bugs in original pangu.py, here are the patches.
+
     # Fix Markdown delete symbol
     new_file_content = re.sub(r'\~\~(\s)?(.*?)(\s)?\~\~',r'~~\2~~',new_file_content)
+
     # Fix Markdown bold(em) symbol
     new_file_content = re.sub(r'\*\*(\s)?(.*?)(\s)?\*\*',r'**\2**',new_file_content)
+    new_file_content = re.sub(r'\_\_(\s)?(.*?)(\s)?\_\_',r'__\2__',new_file_content)
+
     # Fix Markdown italic symbol
     new_file_content = re.sub(r'\*(\s)?(.*?)(\s)?\*',r'*\2*',new_file_content)
+    new_file_content = re.sub(r'\_(\s)?(.*?)(\s)?\_',r'_\2_',new_file_content)
     # OverWrite the original files
     with open(name, 'w', encoding='utf-8') as f:
         f.write(new_file_content)
